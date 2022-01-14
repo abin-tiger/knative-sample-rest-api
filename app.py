@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    time.sleep(1)
-    app.logger.info("Slept for 1 second")
+    time.sleep(0.2)
+    app.logger.info("Slept for 0.2 second")
     
     target = os.environ.get('TARGET', 'World')
     return 'Hello {}!\n'.format(target)
