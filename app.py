@@ -1,4 +1,5 @@
 import os
+import time
 
 from flask import Flask
 
@@ -6,6 +7,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    time.sleep(0.5)
+    app.logger.info("Slept for 0.5 seconds")
+    
     target = os.environ.get('TARGET', 'World')
     return 'Hello {}!\n'.format(target)
 
