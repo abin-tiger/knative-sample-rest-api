@@ -8,6 +8,7 @@ spec:
     spec:
       containers:
       - image: ghcr.io/abin-tiger/sample-rest-api:main
+        imagePullPolicy: Always
         env:
         - name: TARGET
           value: "Python Sample v1"
